@@ -1,0 +1,687 @@
+CRITICAL - 2024-11-16 06:09:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "componenta/chatbox.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('componenta/chatbox.php')
+ 2 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('componenta/chatbox', null, true)
+ 3 APPPATH\Views\layout\template_admin.php(90): CodeIgniter\View\View->include('componenta/chatbox')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\ci4app\\app\\Views\\layout\\template_admin.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('layout/template_admin', [], true)
+ 7 APPPATH\Controllers\Home.php(9): view('layout/template_admin')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 06:40:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/mahasiswa.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/mahasiswa.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/mahasiswa', [], true)
+ 3 APPPATH\Controllers\Mahasiswa.php(12): view('admin/mahasiswa')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 06:41:17 --> ErrorException: Undefined variable $title
+[Method: GET, Route: mahasiswa]
+in APPPATH\Views\layout\template_admin.php on line 24.
+ 1 APPPATH\Views\layout\template_admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\laragon\\www\\ci4app\\app\\Views\\layout\\template_admin.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\ci4app\\app\\Views\\layout\\template_admin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('layout/template_admin', null, true)
+ 5 APPPATH\Views\admin\mahasiswa\mahasiswa_view.php(1): CodeIgniter\View\View->include('layout/template_admin')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\ci4app\\app\\Views\\admin\\mahasiswa\\mahasiswa_view.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/mahasiswa/mahasiswa_view', [], true)
+ 9 APPPATH\Controllers\Mahasiswa.php(12): view('admin/mahasiswa/mahasiswa_view')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+ERROR - 2024-11-16 09:15:27 --> mysqli_sql_exception: Table 'cobaci4.mahasiswas' doesn't exist in C:\laragon\www\ci4app\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4app\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `mahasis...', 0)
+#1 C:\laragon\www\ci4app\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasis...')
+#2 C:\laragon\www\ci4app\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasis...')
+#3 C:\laragon\www\ci4app\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasis...', Array, false)
+#4 C:\laragon\www\ci4app\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4app\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ci4app\app\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ci4app\app\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+#8 C:\laragon\www\ci4app\system\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+#9 C:\laragon\www\ci4app\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+#10 C:\laragon\www\ci4app\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ci4app\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ci4app\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\ci4app\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\ci4app\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-11-16 09:15:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'cobaci4.mahasiswas' doesn't exist
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswas`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 09:15:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'cobaci4.mahasiswas' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswas`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswas`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswas`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 09:15:27 --> [Caused by] mysqli_sql_exception: Table 'cobaci4.mahasiswas' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswas`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswas`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswas`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswas`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+ERROR - 2024-11-16 09:16:49 --> mysqli_sql_exception: Unknown column 'jurusans.nama_jurusan' in 'field list' in C:\laragon\www\ci4app\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4app\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `mahasis...', 0)
+#1 C:\laragon\www\ci4app\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasis...')
+#2 C:\laragon\www\ci4app\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasis...')
+#3 C:\laragon\www\ci4app\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasis...', Array, false)
+#4 C:\laragon\www\ci4app\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4app\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ci4app\app\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ci4app\app\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+#8 C:\laragon\www\ci4app\system\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+#9 C:\laragon\www\ci4app\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+#10 C:\laragon\www\ci4app\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ci4app\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ci4app\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\ci4app\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\ci4app\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-11-16 09:16:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jurusans.nama_jurusan' in 'field list'
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 09:16:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jurusans.nama_jurusan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 09:16:49 --> [Caused by] mysqli_sql_exception: Unknown column 'jurusans.nama_jurusan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+ERROR - 2024-11-16 09:16:52 --> mysqli_sql_exception: Unknown column 'jurusans.nama_jurusan' in 'field list' in C:\laragon\www\ci4app\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4app\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `mahasis...', 0)
+#1 C:\laragon\www\ci4app\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasis...')
+#2 C:\laragon\www\ci4app\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasis...')
+#3 C:\laragon\www\ci4app\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasis...', Array, false)
+#4 C:\laragon\www\ci4app\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4app\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ci4app\app\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ci4app\app\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+#8 C:\laragon\www\ci4app\system\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+#9 C:\laragon\www\ci4app\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+#10 C:\laragon\www\ci4app\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ci4app\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ci4app\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\ci4app\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\ci4app\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-11-16 09:16:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jurusans.nama_jurusan' in 'field list'
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 09:16:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jurusans.nama_jurusan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 09:16:52 --> [Caused by] mysqli_sql_exception: Unknown column 'jurusans.nama_jurusan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+ERROR - 2024-11-16 09:17:35 --> mysqli_sql_exception: Unknown column 'jurusans.nama_jurusan' in 'field list' in C:\laragon\www\ci4app\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4app\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `mahasis...', 0)
+#1 C:\laragon\www\ci4app\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasis...')
+#2 C:\laragon\www\ci4app\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasis...')
+#3 C:\laragon\www\ci4app\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasis...', Array, false)
+#4 C:\laragon\www\ci4app\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4app\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ci4app\app\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ci4app\app\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+#8 C:\laragon\www\ci4app\system\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+#9 C:\laragon\www\ci4app\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+#10 C:\laragon\www\ci4app\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ci4app\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ci4app\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\ci4app\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\ci4app\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-11-16 09:17:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jurusans.nama_jurusan' in 'field list'
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 09:17:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jurusans.nama_jurusan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 09:17:35 --> [Caused by] mysqli_sql_exception: Unknown column 'jurusans.nama_jurusan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `mahasiswa`.*, `jurusans`.`nama_jurusan`
+FROM `mahasiswa`
+JOIN `jurusan` ON `jurusan`.`id` = `mahasiswa`.`jurusan_id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Mahasiswa.php(59): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MahasiswaController.php(17): App\Models\Mahasiswa->getAllMahasiswa()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 09:18:21 --> ErrorException: Undefined variable $array
+[Method: GET, Route: mahasiswa]
+in APPPATH\Views\admin\mahasiswa\mahasiswa_view.php on line 48.
+ 1 APPPATH\Views\admin\mahasiswa\mahasiswa_view.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $array', 'C:\\laragon\\www\\ci4app\\app\\Views\\admin\\mahasiswa\\mahasiswa_view.php', 48)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\ci4app\\app\\Views\\admin\\mahasiswa\\mahasiswa_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/mahasiswa/mahasiswa_view', [], true)
+ 5 APPPATH\Controllers\MahasiswaController.php(19): view('admin/mahasiswa/mahasiswa_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+ERROR - 2024-11-16 10:01:23 --> mysqli_sql_exception: Unknown column 'jurusans.id' in 'group statement' in C:\laragon\www\ci4app\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4app\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `jurusan...', 0)
+#1 C:\laragon\www\ci4app\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jurusan...')
+#2 C:\laragon\www\ci4app\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jurusan...')
+#3 C:\laragon\www\ci4app\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `jurusan...', Array, false)
+#4 C:\laragon\www\ci4app\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4app\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ci4app\app\Models\Jurusan.php(57): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ci4app\app\Controllers\JurusanController.php(17): App\Models\Jurusan->getAllJurusan()
+#8 C:\laragon\www\ci4app\system\CodeIgniter.php(933): App\Controllers\JurusanController->index()
+#9 C:\laragon\www\ci4app\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurusanController))
+#10 C:\laragon\www\ci4app\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ci4app\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ci4app\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\ci4app\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\ci4app\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-11-16 10:01:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jurusans.id' in 'group statement'
+[Method: GET, Route: jurusan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `jurusan`.*, COUNT(mahasiswa.id) AS jumlah_mhs
+FROM `jurusan`
+LEFT JOIN `mahasiswa` ON `mahasiswa`.`jurusan_id` = `jurusan`.`id`
+GROUP BY `jurusans`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Jurusan.php(57): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\JurusanController.php(17): App\Models\Jurusan->getAllJurusan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JurusanController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurusanController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 10:01:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jurusans.id' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jurusan`.*, COUNT(mahasiswa.id) AS jumlah_mhs
+FROM `jurusan`
+LEFT JOIN `mahasiswa` ON `mahasiswa`.`jurusan_id` = `jurusan`.`id`
+GROUP BY `jurusans`.`id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jurusan`.*, COUNT(mahasiswa.id) AS jumlah_mhs
+FROM `jurusan`
+LEFT JOIN `mahasiswa` ON `mahasiswa`.`jurusan_id` = `jurusan`.`id`
+GROUP BY `jurusans`.`id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `jurusan`.*, COUNT(mahasiswa.id) AS jumlah_mhs
+FROM `jurusan`
+LEFT JOIN `mahasiswa` ON `mahasiswa`.`jurusan_id` = `jurusan`.`id`
+GROUP BY `jurusans`.`id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Jurusan.php(57): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\JurusanController.php(17): App\Models\Jurusan->getAllJurusan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JurusanController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurusanController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 10:01:23 --> [Caused by] mysqli_sql_exception: Unknown column 'jurusans.id' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `jurusan`.*, COUNT(mahasiswa.id) AS jumlah_mhs
+FROM `jurusan`
+LEFT JOIN `mahasiswa` ON `mahasiswa`.`jurusan_id` = `jurusan`.`id`
+GROUP BY `jurusans`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jurusan`.*, COUNT(mahasiswa.id) AS jumlah_mhs
+FROM `jurusan`
+LEFT JOIN `mahasiswa` ON `mahasiswa`.`jurusan_id` = `jurusan`.`id`
+GROUP BY `jurusans`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jurusan`.*, COUNT(mahasiswa.id) AS jumlah_mhs
+FROM `jurusan`
+LEFT JOIN `mahasiswa` ON `mahasiswa`.`jurusan_id` = `jurusan`.`id`
+GROUP BY `jurusans`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `jurusan`.*, COUNT(mahasiswa.id) AS jumlah_mhs
+FROM `jurusan`
+LEFT JOIN `mahasiswa` ON `mahasiswa`.`jurusan_id` = `jurusan`.`id`
+GROUP BY `jurusans`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Jurusan.php(57): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\JurusanController.php(17): App\Models\Jurusan->getAllJurusan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JurusanController->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurusanController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 10:01:48 --> ErrorException: Undefined variable $mahasiswa
+[Method: GET, Route: jurusan]
+in APPPATH\Views\admin\jurusan\jurusan_view.php on line 47.
+ 1 APPPATH\Views\admin\jurusan\jurusan_view.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mahasiswa', 'C:\\laragon\\www\\ci4app\\app\\Views\\admin\\jurusan\\jurusan_view.php', 47)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\ci4app\\app\\Views\\admin\\jurusan\\jurusan_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/jurusan/jurusan_view', [], true)
+ 5 APPPATH\Controllers\JurusanController.php(19): view('admin/jurusan/jurusan_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\JurusanController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurusanController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 15:00:04 --> ErrorException: Undefined array key "jurusan"
+[Method: GET, Route: mahasiswa/1/detail]
+in APPPATH\Views\admin\mahasiswa\mahasiswa_detail.php on line 14.
+ 1 APPPATH\Views\admin\mahasiswa\mahasiswa_detail.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jurusan"', 'C:\\laragon\\www\\ci4app\\app\\Views\\admin\\mahasiswa\\mahasiswa_detail.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\ci4app\\app\\Views\\admin\\mahasiswa\\mahasiswa_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/mahasiswa/mahasiswa_detail', [], true)
+ 5 APPPATH\Controllers\MahasiswaController.php(36): view('admin/mahasiswa/mahasiswa_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 15:00:15 --> ErrorException: Undefined array key "nama_jurusan"
+[Method: GET, Route: mahasiswa/1/detail]
+in APPPATH\Views\admin\mahasiswa\mahasiswa_detail.php on line 14.
+ 1 APPPATH\Views\admin\mahasiswa\mahasiswa_detail.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_jurusan"', 'C:\\laragon\\www\\ci4app\\app\\Views\\admin\\mahasiswa\\mahasiswa_detail.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\ci4app\\app\\Views\\admin\\mahasiswa\\mahasiswa_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/mahasiswa/mahasiswa_detail', [], true)
+ 5 APPPATH\Controllers\MahasiswaController.php(36): view('admin/mahasiswa/mahasiswa_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+CRITICAL - 2024-11-16 15:06:46 --> ErrorException: Undefined array key "nama_jurusan"
+[Method: GET, Route: mahasiswa/1/detail]
+in APPPATH\Views\admin\mahasiswa\mahasiswa_detail.php on line 14.
+ 1 APPPATH\Views\admin\mahasiswa\mahasiswa_detail.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_jurusan"', 'C:\\laragon\\www\\ci4app\\app\\Views\\admin\\mahasiswa\\mahasiswa_detail.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\ci4app\\app\\Views\\admin\\mahasiswa\\mahasiswa_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/mahasiswa/mahasiswa_detail', [], true)
+ 5 APPPATH\Controllers\MahasiswaController.php(37): view('admin/mahasiswa/mahasiswa_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+INFO - 2024-11-16 15:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 15:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:13:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 16:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:07:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:07:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:14:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:14:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:24:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:24:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-16 17:29:46 --> Error: Object of class DateTime could not be converted to string
+[Method: GET, Route: mahasiswa]
+in APPPATH\Views\components\toast.php on line 1.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('components/toast', null, true)
+ 4 APPPATH\Views\layout\template_admin.php(165): CodeIgniter\View\View->include('components/toast')
+ 5 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\ci4app\\app\\Views\\layout\\template_admin.php')
+ 6 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('layout/template_admin', [], true)
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/mahasiswa/mahasiswa_view', [], true)
+ 9 APPPATH\Controllers\MahasiswaController.php(20): view('admin/mahasiswa/mahasiswa_view', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaController->index()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4app\\public\\index.php')
+INFO - 2024-11-16 17:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:41:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 17:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 18:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 18:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 18:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 18:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 18:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-16 18:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
